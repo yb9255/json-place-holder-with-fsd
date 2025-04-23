@@ -1,15 +1,16 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import { Homepage } from "@/pages";
+import { ROUTE_CONSTANTS } from "@/shared/routes";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: ROUTE_CONSTANTS.home.root,
     element: <Homepage />,
   },
 ]);
 
-function AppRouter() {
+const AppRouter = () => {
   return <RouterProvider router={router} />;
-}
+};
 
 export default AppRouter;
