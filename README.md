@@ -1,0 +1,3 @@
+# FSD Architecture Sample with JSON Placeholder
+
+README 작성중...
