@@ -1,20 +1,34 @@
 import { cn } from "@/shared/lib";
 import { Button } from "@/shared/ui";
+import { Link, Outlet } from "react-router";
+import { ROUTE_CONSTANTS } from "@/shared/routes";
 
 const Homepage = () => {
   return (
     <main
-      className={cn(
-        "flex",
-        "h-screen",
-        "w-screen",
-        "items-center",
-        "justify-center",
-        "bg-background"
-      )}
+      className={cn("flex", "flex-col", "gap-3", "w-screen", "bg-background")}
     >
-      <h1 className={cn("font-bold")}>Homepage</h1>
-      <Button variant="outline">Click me</Button>
+      <nav
+        className={cn(
+          "flex",
+          "gap-3",
+          "shadow-sm",
+          "flex-1",
+          "sticky",
+          "top-0",
+          "items-center",
+          "bg-white"
+        )}
+      >
+        <Button asChild variant="link">
+          <Link to={ROUTE_CONSTANTS.home.root}>Home</Link>
+        </Button>
+        <Button asChild variant="link">
+          <Link to={ROUTE_CONSTANTS.posts.root}>Posts</Link>
+        </Button>
+      </nav>
+
+      <Outlet />
     </main>
   );
 };

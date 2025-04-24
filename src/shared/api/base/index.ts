@@ -13,13 +13,13 @@ const api = ky.create({
 });
 
 export const http = {
-  get: ({ path, options }: GetRequest) => api.get(path, options).json(),
-  post: ({ path, body, options }: PostRequest) =>
-    api.post(path, { json: body, ...options }).json(),
-  put: ({ path, body, options }: PutRequest) =>
-    api.put(path, { json: body, ...options }).json(),
-  patch: ({ path, body, options }: PatchRequest) =>
-    api.patch(path, { json: body, ...options }).json(),
-  delete: ({ path, options }: DeleteRequest) =>
-    api.delete(path, options).json(),
+  get: <T>({ path, options }: GetRequest) => api.get(path, options).json<T>(),
+  post: <T>({ path, body, options }: PostRequest) =>
+    api.post(path, { json: body, ...options }).json<T>(),
+  put: <T>({ path, body, options }: PutRequest) =>
+    api.put(path, { json: body, ...options }).json<T>(),
+  patch: <T>({ path, body, options }: PatchRequest) =>
+    api.patch(path, { json: body, ...options }).json<T>(),
+  delete: <T>({ path, options }: DeleteRequest) =>
+    api.delete(path, options).json<T>(),
 } as const;
