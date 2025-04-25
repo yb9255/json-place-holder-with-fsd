@@ -4,8 +4,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/shared/ui";
-import type { Post } from "../model";
+} from '@/shared/ui';
+import type { Post } from '../model';
 
 export function PostCard({ post }: { post: Post }) {
   return (

@@ -1,4 +1,4 @@
-import type { Options } from "ky";
+import type { Options } from 'ky';
 
 export type GetRequest = {
   path: string;

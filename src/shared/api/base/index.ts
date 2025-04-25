@@ -1,12 +1,12 @@
-import ky from "ky";
-import { API_URL } from "../../config";
+import ky from 'ky';
+import { API_URL } from '../../config';
 import type {
   GetRequest,
   PostRequest,
   PutRequest,
   PatchRequest,
   DeleteRequest,
-} from "./model";
+} from './model';
 
 const api = ky.create({
   prefixUrl: API_URL,

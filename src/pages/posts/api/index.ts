@@ -1,9 +1,9 @@
-import { http } from "@/shared/api";
+import { http } from '@/shared/api';
 import {
   useSuspenseQuery,
   type UseSuspenseQueryOptions,
-} from "@tanstack/react-query";
-import type { Post } from "../model";
+} from '@tanstack/react-query';
+import type { Post } from '../model';
 
 export const usePosts = ({
   options,
@@ -11,7 +11,7 @@ export const usePosts = ({
   options?: UseSuspenseQueryOptions<Post[]>;
 } = {}) =>
   useSuspenseQuery<Post[]>({
-    queryKey: ["posts"],
-    queryFn: () => http.get<Post[]>({ path: "posts" }),
+    queryKey: ['posts'],
+    queryFn: () => http.get<Post[]>({ path: 'posts' }),
     ...options,
   });

@@ -3,14 +3,14 @@ type RouteConstant = {
   [key: string]: string | ((value: string) => string);
 };
 
-type RouteDomain = "home" | "posts";
+type RouteDomain = 'home' | 'posts';
 
 export const ROUTE_CONSTANTS: Record<RouteDomain, RouteConstant> = {
   home: {
-    root: "/",
+    root: '/',
   },
   posts: {
-    root: "/posts",
+    root: '/posts',
     getPostById: (id: string) => `/posts/${id}`,
   },
 } as const;
