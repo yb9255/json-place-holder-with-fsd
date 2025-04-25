@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { ROUTE_CONSTANTS } from '@/shared/routes';
 
-import { HomePage, PostsPage, PostPage, UsersPage } from '@/pages';
+import { HomePage, PostsPage, PostPage, UsersPage, UserPage } from '@/pages';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +27,10 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <UsersPage />,
+          },
+          {
+            path: ':userId',
+            element: <UserPage />,
           },
         ],
       },
