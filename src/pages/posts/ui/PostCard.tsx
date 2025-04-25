@@ -5,17 +5,24 @@ import {
   CardHeader,
   CardTitle,
 } from '@/shared/ui';
-import type { Post } from '../model';
+import type { Post } from '@/entities/post/model';
+import { cn } from '@/shared/lib';
+import { Link } from 'react-router';
+import { ROUTE_CONSTANTS } from '@/shared/routes';
 
 export function PostCard({ post }: { post: Post }) {
+  const { id, title, body } = post;
+
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{post.title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <CardDescription>{post.body}</CardDescription>
-      </CardContent>
-    </Card>
+    <Link to={ROUTE_CONSTANTS.posts.getPostById(id)}>
+      <Card className={cn('cursor-pointer', 'w-[25rem]', 'h-[14rem]')}>
+        <CardHeader>
+          <CardTitle>{title}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <CardDescription>{body}</CardDescription>
+        </CardContent>
+      </Card>
+    </Link>
   );
 }

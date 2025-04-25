@@ -1,16 +1,9 @@
-type RouteConstant = {
-  root: string;
-  [key: string]: string | ((value: string) => string);
-};
-
-type RouteDomain = 'home' | 'posts';
-
-export const ROUTE_CONSTANTS: Record<RouteDomain, RouteConstant> = {
+export const ROUTE_CONSTANTS = {
   home: {
     root: '/',
   },
   posts: {
     root: '/posts',
-    getPostById: (id: string) => `/posts/${id}`,
+    getPostById: (id: string | number) => `/posts/${id}`,
   },
 } as const;

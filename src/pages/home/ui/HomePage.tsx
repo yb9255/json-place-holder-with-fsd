@@ -1,9 +1,12 @@
 import { cn } from '@/shared/lib';
-import { Button } from '@/shared/ui';
-import { Link, Outlet } from 'react-router';
+import { Button, Spinner } from '@/shared/ui';
+import { Link, Outlet, useLocation } from 'react-router';
 import { ROUTE_CONSTANTS } from '@/shared/routes';
+import { Suspense } from 'react';
 
 const Homepage = () => {
+  const location = useLocation();
+
   return (
     <main
       className={cn('flex', 'flex-col', 'gap-3', 'w-screen', 'bg-background')}
@@ -28,7 +31,9 @@ const Homepage = () => {
         </Button>
       </nav>
 
-      <Outlet />
+      <Suspense fallback={<Spinner />} key={location.key}>
+        <Outlet />
+      </Suspense>
     </main>
   );
 };
