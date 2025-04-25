@@ -29,6 +29,9 @@ const Homepage = () => {
         <Button asChild variant="link">
           <Link to={ROUTE_CONSTANTS.posts.root}>Posts</Link>
         </Button>
+        <Button asChild variant="link">
+          <Link to={ROUTE_CONSTANTS.users.root}>Users</Link>
+        </Button>
       </nav>
 
       <Suspense fallback={<Spinner />} key={location.key}>

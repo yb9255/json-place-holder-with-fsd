@@ -5,6 +5,17 @@ import {
 } from '@tanstack/react-query';
 import type { User } from '../model';
 
+export const useUsers = ({
+  options,
+}: {
+  options?: UseSuspenseQueryOptions<User[]>;
+} = {}) =>
+  useSuspenseQuery<User[]>({
+    queryKey: ['users'],
+    queryFn: () => http.get<User[]>({ path: 'users' }),
+    ...options,
+  });
+
 export const useUser = ({
   id,
   options,

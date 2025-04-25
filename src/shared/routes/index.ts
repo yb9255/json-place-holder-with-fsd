@@ -6,4 +6,8 @@ export const ROUTE_CONSTANTS = {
     root: '/posts',
     getPostById: (id: string | number) => `/posts/${id}`,
   },
+  users: {
+    root: '/users',
+    getUserById: (id: string | number) => `/users/${id}`,
+  },
 } as const;

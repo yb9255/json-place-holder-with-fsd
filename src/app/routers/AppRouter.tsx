@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { ROUTE_CONSTANTS } from '@/shared/routes';
 
-import { HomePage, PostsPage, PostPage } from '@/pages';
+import { HomePage, PostsPage, PostPage, UsersPage } from '@/pages';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +18,15 @@ const router = createBrowserRouter([
           {
             path: ':postId',
             element: <PostPage />,
+          },
+        ],
+      },
+      {
+        path: ROUTE_CONSTANTS.users.root,
+        children: [
+          {
+            index: true,
+            element: <UsersPage />,
           },
         ],
       },
