@@ -1,7 +1,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { ROUTE_CONSTANTS } from '@/shared/routes';
 
-import { HomePage, PostsPage, PostPage, UsersPage, UserPage } from '@/pages';
+import { HomePage } from '@/pages/home';
+import { PostsPage } from '@/pages/posts';
+import { PostPage } from '@/pages/post';
+import { UsersPage } from '@/pages/users';
+import { UserPage } from '@/pages/user';
 
 const router = createBrowserRouter([
   {
