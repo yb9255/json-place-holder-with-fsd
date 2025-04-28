@@ -1,44 +1,20 @@
-import { cn } from '@/shared/lib';
-import { Button, Spinner } from '@/shared/ui';
-import { Link, Outlet, useLocation } from 'react-router';
-import { ROUTE_CONSTANTS } from '@/shared/routes';
 import { Suspense } from 'react';
+import { MainLayout, GlobalNavBar } from '@/widgets/ui';
+import { useLocation } from 'react-router';
+import { Outlet } from 'react-router';
+import { Spinner } from '@/shared/ui';
 
-const Homepage = () => {
+const HomePage = () => {
   const location = useLocation();
 
   return (
-    <main
-      className={cn('flex', 'flex-col', 'gap-3', 'w-screen', 'bg-background')}
-    >
-      <nav
-        className={cn(
-          'flex',
-          'gap-3',
-          'shadow-sm',
-          'flex-1',
-          'sticky',
-          'top-0',
-          'items-center',
-          'bg-white',
-        )}
-      >
-        <Button asChild variant="link">
-          <Link to={ROUTE_CONSTANTS.home.root}>Home</Link>
-        </Button>
-        <Button asChild variant="link">
-          <Link to={ROUTE_CONSTANTS.posts.root}>Posts</Link>
-        </Button>
-        <Button asChild variant="link">
-          <Link to={ROUTE_CONSTANTS.users.root}>Users</Link>
-        </Button>
-      </nav>
-
+    <MainLayout>
+      <GlobalNavBar />
       <Suspense fallback={<Spinner />} key={location.key}>
         <Outlet />
       </Suspense>
-    </main>
+    </MainLayout>
   );
 };
 
-export default Homepage;
+export default HomePage;
