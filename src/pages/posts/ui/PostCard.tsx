@@ -4,7 +4,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/shared/ui';
+} from '@/shared/ui/Card';
 import type { Post } from '@/entities/post/model';
 import { cn } from '@/shared/lib/style';
 import { Link } from 'react-router';

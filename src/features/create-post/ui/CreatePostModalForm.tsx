@@ -3,11 +3,11 @@ import {
   FormControl,
   FormLabel,
   FormMessage,
-  Input,
   Form,
   FormField,
-  Button,
-} from '@/shared/ui';
+} from '@/shared/ui/Form';
+import { Input } from '@/shared/ui/Input';
+import { Button } from '@/shared/ui/Button';
 import { useForm } from 'react-hook-form';
 import type { CreatePostFormSchema } from '../model';
 import { zodResolver } from '@hookform/resolvers/zod';
