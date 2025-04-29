@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { MainLayout, GlobalNavBar } from '@/widgets/layout/ui';
 import { useLocation, Outlet } from 'react-router';
-import { Spinner } from '@/shared/ui';
+import { Spinner } from '@/shared/ui/Spinner';
 
 const HomePage = () => {
   const location = useLocation();

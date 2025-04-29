@@ -1,5 +1,5 @@
 import { useMutation, type UseMutationOptions } from '@tanstack/react-query';
-import { http } from '@/shared/api';
+import { http } from '@/shared/api/base';
 import type { CreatePostBody } from '../model';
 
 export const useCreatePostMutation = (

@@ -1,6 +1,6 @@
 import { cn } from '@/shared/lib/style';
 import { ROUTE_CONSTANTS } from '@/shared/routes';
-import { Button } from '@/shared/ui';
+import { Button } from '@/shared/ui/Button';
 import { Link } from 'react-router';
 
 const GlobalNavBar = () => {

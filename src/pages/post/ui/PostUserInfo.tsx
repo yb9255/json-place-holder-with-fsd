@@ -1,7 +1,7 @@
 import { useUser } from '@/entities/user/api';
 import { ROUTE_CONSTANTS } from '@/shared/routes';
 import { cn } from '@/shared/lib/style';
-import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui';
+import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui/Avatar';
 import { Link } from 'react-router';
 
 const PostUserInfo = ({ userId }: { userId: number }) => {

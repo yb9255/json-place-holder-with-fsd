@@ -1,7 +1,7 @@
 import { User } from '@/entities/user/model';
 import { cn } from '@/shared/lib/style';
 import { ROUTE_CONSTANTS } from '@/shared/routes';
-import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui';
+import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui/Avatar';
 import { Link } from 'react-router';
 
 const UserListItem = ({ user }: { user: User }) => {

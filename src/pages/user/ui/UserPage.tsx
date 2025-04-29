@@ -1,6 +1,6 @@
 import { useUser } from '@/entities/user/api';
 import { cn } from '@/shared/lib/style';
-import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui';
+import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui/Avatar';
 import { useParams } from 'react-router';
 
 const UserPage = () => {

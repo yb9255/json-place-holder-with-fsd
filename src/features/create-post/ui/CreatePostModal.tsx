@@ -4,10 +4,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-  Button,
-  Spinner,
-} from '@/shared/ui';
+} from '@/shared/ui/Dialog';
+import { Spinner } from '@/shared/ui/Spinner';
 
+import { Button } from '@/shared/ui/Button';
 import { useCreatePostMutation } from '../api';
 import { CreatePostFormSchema } from '../model';
 import CreatePostModalForm from './CreatePostModalForm';
