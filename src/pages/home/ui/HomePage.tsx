@@ -1,7 +1,7 @@
-import { Suspense } from "react";
-import { MainLayout, GlobalNavBar } from "@/widgets/ui";
-import { useLocation, Outlet } from "react-router";
-import { Spinner } from "@/shared/ui";
+import { Suspense } from 'react';
+import { MainLayout, GlobalNavBar } from '@/widgets/layout/ui';
+import { useLocation, Outlet } from 'react-router';
+import { Spinner } from '@/shared/ui';
 
 const HomePage = () => {
   const location = useLocation();

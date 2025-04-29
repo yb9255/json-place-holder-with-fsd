@@ -1,7 +1,7 @@
-import { useUser } from "@/entities/user/api";
-import { cn } from "@/shared/lib/style";
-import { Avatar, AvatarFallback, AvatarImage } from "@/shared/ui";
-import { useParams } from "react-router";
+import { useUser } from '@/entities/user/api';
+import { cn } from '@/shared/lib/style';
+import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui';
+import { useParams } from 'react-router';
 
 const UserPage = () => {
   const { userId } = useParams<{ userId: string }>();
@@ -12,7 +12,7 @@ const UserPage = () => {
 
   return (
     <>
-      <header className={cn("flex", "items-center", "gap-2")}>
+      <header className={cn('flex', 'items-center', 'gap-2')}>
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>CN</AvatarFallback>

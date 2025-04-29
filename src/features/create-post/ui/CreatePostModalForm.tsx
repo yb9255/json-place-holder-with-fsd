@@ -7,12 +7,12 @@ import {
   Form,
   FormField,
   Button,
-} from "@/shared/ui";
-import { useForm } from "react-hook-form";
-import type { CreatePostFormSchema } from "../model";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { createPostFormSchema } from "../model";
-import { cn } from "@/shared/lib/style";
+} from '@/shared/ui';
+import { useForm } from 'react-hook-form';
+import type { CreatePostFormSchema } from '../model';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { createPostFormSchema } from '../model';
+import { cn } from '@/shared/lib/style';
 
 type Props = {
   onSubmit: (data: CreatePostFormSchema) => void;
@@ -21,15 +21,15 @@ const CreatePostModalForm = ({ onSubmit }: Props) => {
   const form = useForm<CreatePostFormSchema>({
     resolver: zodResolver(createPostFormSchema),
     defaultValues: {
-      title: "",
-      body: "",
+      title: '',
+      body: '',
       userId: 101,
     },
   });
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className={cn("space-y-4")}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className={cn('space-y-4')}>
         <FormField
           control={form.control}
           name="title"

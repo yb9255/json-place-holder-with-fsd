@@ -3,7 +3,7 @@ import { http } from '@/shared/api';
 import type { CreatePostBody } from '../model';
 
 export const useCreatePostMutation = (
-  options?: UseMutationOptions<CreatePostBody, Error, CreatePostBody>,
+  options?: UseMutationOptions<CreatePostBody, Error, CreatePostBody>
 ) =>
   useMutation({
     mutationFn: (body: CreatePostBody) =>
