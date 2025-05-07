@@ -1,7 +1,7 @@
 import { cn } from '@/shared/lib/style';
-import { usePosts } from '../../../entities/post/api';
+import { usePosts } from '@/entities/post';
 import { PostCard } from './PostCard';
-import { CreatePostModal } from '@/features/create-post/ui';
+import { CreatePostModal } from '@/features/create-post';
 
 const PostPage = () => {
   const { data } = usePosts();

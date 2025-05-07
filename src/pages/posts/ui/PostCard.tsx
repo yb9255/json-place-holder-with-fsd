@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/shared/ui/Card';
-import type { Post } from '@/entities/post/model';
+import type { Post } from '@/entities/post';
 import { cn } from '@/shared/lib/style';
 import { Link } from 'react-router';
 import { ROUTE_CONSTANTS } from '@/shared/routes';

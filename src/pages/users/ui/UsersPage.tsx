@@ -1,4 +1,4 @@
-import { useUsers } from '@/entities/user/api';
+import { useUsers } from '@/entities/user';
 import { cn } from '@/shared/lib/style';
 import { ROUTE_CONSTANTS } from '@/shared/routes';
 import { Link } from 'react-router';

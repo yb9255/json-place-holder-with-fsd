@@ -1,4 +1,4 @@
-import { http } from '@/shared/api/base';
+import { http } from '@/shared/api';
 import {
   useSuspenseQuery,
   type UseSuspenseQueryOptions,

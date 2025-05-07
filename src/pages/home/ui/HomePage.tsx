@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { MainLayout, GlobalNavBar } from '@/widgets/layout/ui';
+import { MainLayout, GlobalNavBar } from '@/widgets/layout';
 import { useLocation, Outlet } from 'react-router';
 import { Spinner } from '@/shared/ui/Spinner';
 

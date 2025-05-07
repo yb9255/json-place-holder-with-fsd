@@ -1,4 +1,4 @@
-import { useUser } from '@/entities/user/api';
+import { useUser } from '@/entities/user';
 import { ROUTE_CONSTANTS } from '@/shared/routes';
 import { cn } from '@/shared/lib/style';
 import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui/Avatar';

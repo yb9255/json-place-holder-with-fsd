@@ -1,4 +1,4 @@
-import { usePostComments } from '@/entities/post/api';
+import { usePostComments } from '@/entities/post';
 import { cn } from '@/shared/lib/style';
 
 const PostComments = ({ postId }: { postId: number }) => {

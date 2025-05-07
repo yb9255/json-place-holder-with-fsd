@@ -1,4 +1,4 @@
-import { useUser } from '@/entities/user/api';
+import { useUser } from '@/entities/user';
 import { cn } from '@/shared/lib/style';
 import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui/Avatar';
 import { useParams } from 'react-router';

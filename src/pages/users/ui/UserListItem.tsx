@@ -1,4 +1,4 @@
-import { User } from '@/entities/user/model';
+import type { User } from '@/entities/user';
 import { cn } from '@/shared/lib/style';
 import { ROUTE_CONSTANTS } from '@/shared/routes';
 import { Avatar, AvatarFallback, AvatarImage } from '@/shared/ui/Avatar';

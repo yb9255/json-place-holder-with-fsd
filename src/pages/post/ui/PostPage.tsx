@@ -1,4 +1,4 @@
-import { usePost } from '@/entities/post/api';
+import { usePost } from '@/entities/post';
 import { useParams } from 'react-router';
 import PostUserInfo from './PostUserInfo';
 import { cn } from '@/shared/lib/style';
